@@ -1,35 +1,51 @@
-# Missy Golden Website
+# Missy Golden Actor Website
 
-A simple static website for Missy Golden, child actor, singer, and performer.
+Parent/guardian-managed static website for Missy Golden.
 
-## Files
+## Upload to GitHub
 
-- `index.html` — main website
-- `style.css` — site styling
-- `assets/` — photos and resume PDF
+Upload these files and folders to the repo:
 
-## Before publishing
+- `index.html`
+- `style.css`
+- `assets/`
 
-Open `index.html` and replace:
+## Assets included
 
-```html
-YOUR_EMAIL_HERE
+- `assets/missy-headshot.jpg`
+- `assets/missy-personality.jpg`
+- `assets/missy-fullbody.jpg`
+- `assets/Missy_Golden_Resume.pdf`
+
+## Add YouTube videos
+
+In `index.html`, replace:
+
+- `YOUTUBE_VIDEO_ID_1`
+- `YOUTUBE_VIDEO_ID_2`
+- `YOUTUBE_VIDEO_ID_3`
+
+with the actual YouTube IDs.
+
+Example:
+
+Regular YouTube link:
+
+```text
+https://www.youtube.com/watch?v=ABC123
 ```
 
-with the parent/guardian contact email you want casting and agencies to use.
+Embed format used in the code:
 
-## GitHub Pages setup
+```text
+https://www.youtube.com/embed/ABC123
+```
 
-1. Create a repository on GitHub.
-2. Upload all files from this folder.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, choose:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-5. Save.
-6. Wait a minute, then open the Pages URL GitHub gives you.
+## GitHub Pages
 
-## Recommended safety note
-
-Because this is for a child performer, use a parent/guardian contact email instead of publishing the child’s personal email or phone number.
+1. Go to repository Settings.
+2. Go to Pages.
+3. Choose `Deploy from a branch`.
+4. Branch: `main`
+5. Folder: `/root`
+6. Save.
