@@ -3,224 +3,423 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Missy Golden | Actor & Singer</title>
-  <meta name="description" content="Missy Golden is a New York City child actor, singer, and performer." />
+  <meta name="description" content="Official performer profile for Missy Golden, NYC-based child actor and singer." />
+  <style>
+    :root {
+      --bg: #fffaf6;
+      --text: #1f1f1f;
+      --muted: #666;
+      --accent: #c78b6a;
+      --accent-dark: #8e573b;
+      --card: #ffffff;
+      --line: #eadbd2;
+    }
 
-  <link rel="stylesheet" href="style.css" />
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1080px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 250, 246, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 44px;
+      align-items: center;
+      padding: 60px 0 44px;
+    }
+
+    .hero-photo {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 14px;
+      box-shadow: 0 20px 50px rgba(80, 45, 30, 0.12);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      display: block;
+      border-radius: 22px;
+      object-fit: cover;
+    }
+
+    .eyebrow {
+      color: var(--accent-dark);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 76px);
+      line-height: 0.95;
+      margin: 0 0 18px;
+      letter-spacing: -2px;
+    }
+
+    .tagline {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 24px;
+    }
+
+    .quick-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 26px 0;
+    }
+
+    .pill {
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent-dark);
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+      box-shadow: 0 10px 22px rgba(142, 87, 59, 0.18);
+    }
+
+    section {
+      padding: 42px 0;
+    }
+
+    .section-title {
+      font-size: 30px;
+      margin: 0 0 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 14px 40px rgba(80, 45, 30, 0.07);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .credit {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr auto;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: start;
+      font-size: 15px;
+    }
+
+    .credit:last-child {
+      border-bottom: none;
+    }
+
+    .credit strong {
+      display: block;
+    }
+
+    .label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 2px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #fff5ee;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 820px) {
+      header {
+        position: static;
+      }
+
+      nav,
+      .hero,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        align-items: flex-start;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .credit {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-
-  <header class="hero">
-    <nav class="nav">
-      <a href="index.html" class="logo">Missy Golden</a>
-
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#credits">Credits</a>
-        <a href="#videos">Videos</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-
-    <section class="hero-content">
-      <div class="hero-text">
-        <p class="eyebrow">New York City</p>
-        <h1>Missy Golden</h1>
-        <h2>Child Actor | Singer | Performer</h2>
-
-        <p>
-          A joyful and expressive young performer with strong focus,
-          clear diction, and a natural on-camera presence.
-        </p>
-
-        <div class="buttons">
-          <a href="#videos" class="button primary">Watch Clips</a>
-          <a href="assets/Missy_Golden_Resume.pdf" target="_blank" class="button">View Resume</a>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">MISSY GOLDEN</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#credits">Credits</a>
+          <a href="#training">Training</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </div>
-      </div>
-
-      <div class="hero-image">
-        <img src="assets/missy-headshot.jpg" alt="Missy Golden headshot" />
-      </div>
-    </section>
+      </nav>
+    </div>
   </header>
 
-
   <main>
+    <section class="hero container">
+      <div class="hero-photo">
+        <!-- Replace this image path with your uploaded headshot file path on your website. -->
+        <img src="headshot.jpg" alt="Missy Golden headshot" />
+      </div>
 
-    <section id="about" class="section">
-      <h2>About</h2>
+      <div>
+        <div class="eyebrow">Actor | Singer | New York City</div>
+        <h1>Missy Golden</h1>
+        <p class="tagline">
+          Joyful, expressive young performer with strong memorization skills,
+          natural screen presence, and professional on-set experience.
+        </p>
 
-      <p>
-        Missy Golden is a New York City–based child actor, singer, and performer.
-        She brings stories to life through singing, acting, and expressive character work.
-        She is non-union, multiracial / ethnically ambiguous, and available for film,
-        commercial, music video, print, and theatrical opportunities.
-      </p>
+        <div class="quick-info" aria-label="Performer details">
+          <span class="pill">Playing Age: 5–9</span>
+          <span class="pill">Height: 3'10&quot;</span>
+          <span class="pill">Hair: Brown</span>
+          <span class="pill">Eyes: Brown</span>
+          <span class="pill">Non-Union</span>
+        </div>
+
+        <div class="buttons">
+          <a class="button" href="mailto:missy.golden.social@gmail.com">Contact</a>
+          <a class="button secondary" href="Missy_Golden_Resume.pdf" target="_blank" rel="noopener">View Résumé</a>
+          <a class="button secondary" href="https://www.youtube.com/@MissyGolden-NYC" target="_blank" rel="noopener">Watch Clips</a>
+        </div>
+      </div>
     </section>
 
+    <section id="about">
+      <div class="container card">
+        <h2 class="section-title">About</h2>
+        <p>
+          Missy Golden is a New York City-based child actor and singer. She brings
+          focus, imagination, and warmth to performance work, with experience in
+          music videos, commercial/industrial production, choir training, and
+          screen acting environments.
+        </p>
+      </div>
+    </section>
 
-    <section id="credits" class="section">
-      <h2>Credits</h2>
+    <section id="credits">
+      <div class="container">
+        <h2 class="section-title">Credits</h2>
 
-      <div class="credit-grid">
-
-        <article class="card">
+        <div class="card" style="margin-bottom: 18px;">
           <h3>Film / Music Video</h3>
-          <p><strong>Caskets</strong> — Chris Webby</p>
-          <p>Young Girl | Dir. Donn “Q” Quijada | 2026</p>
-        </article>
+          <div class="credit">
+            <div><div class="label">Production</div><strong>Caskets (Chris Webby)</strong></div>
+            <div><div class="label">Role</div>Young Girl</div>
+            <div><div class="label">Director / Production</div>Dir. Donn Q Quijada</div>
+            <div><div class="label">Year</div>2026</div>
+          </div>
+          <div class="credit">
+            <div><div class="label">Production</div><strong>Untitled Music Video (Perry Maysun)</strong></div>
+            <div><div class="label">Role</div>Featured Background / Grandchild</div>
+            <div><div class="label">Director / Production</div>&mdash;</div>
+            <div><div class="label">Year</div>2026</div>
+          </div>
+        </div>
 
-        <article class="card">
-          <h3>Film / Music Video</h3>
-          <p><strong>Untitled Music Video</strong> — Perry Maysun</p>
-          <p>Featured Background / Grandchild | 2026</p>
-        </article>
-
-        <article class="card">
+        <div class="card">
           <h3>Commercial / Industrial</h3>
-          <p><strong>Met 81st Street Studios</strong></p>
-          <p>Extra | Production Company: Bluecadet | 2023</p>
-        </article>
-
+          <div class="credit">
+            <div><div class="label">Production</div><strong>Met 81st Street Studios</strong></div>
+            <div><div class="label">Role</div>Extra</div>
+            <div><div class="label">Production Company</div>Bluecadet</div>
+            <div><div class="label">Year</div>2023</div>
+          </div>
+        </div>
       </div>
     </section>
 
-
-    <section class="section">
-      <h2>Training & Skills</h2>
-
-      <div class="two-column">
-
-        <div>
-          <h3>Training</h3>
-          <ul>
-            <li>NYC Children’s Chorus</li>
-            <li>Private Vocal Coaching — Ongoing</li>
-            <li>Gifted & Advanced Academic Program — Elementary Level</li>
-          </ul>
+    <section id="training">
+      <div class="container grid">
+        <div class="card">
+          <h2 class="section-title">Training</h2>
+          <p><strong>NYC Children’s Chorus</strong><br />Piccolo Ensemble</p>
+          <p><strong>Private Vocal Coaching</strong><br />Ongoing</p>
         </div>
 
-        <div>
-          <h3>Skills</h3>
-          <ul>
-            <li>Singing</li>
-            <li>Sight Reading</li>
-            <li>Acting & Character Work</li>
-            <li>Strong Memorization & Focus</li>
-            <li>Clear Diction & Expressive Delivery</li>
-            <li>Active / Athletic: Climbing</li>
-          </ul>
+        <div id="skills" class="card">
+          <h2 class="section-title">Special Skills</h2>
+          <div class="skills">
+            <span class="skill">Singing (Alto)</span>
+            <span class="skill">Acting</span>
+            <span class="skill">Sight Reading</span>
+            <span class="skill">Strong Memorization</span>
+            <span class="skill">Screen Acting</span>
+            <span class="skill">Improvisation</span>
+            <span class="skill">Climbing</span>
+          </div>
         </div>
-
       </div>
     </section>
 
-
-    <section id="videos" class="section">
-      <h2>Videos</h2>
-
-      <p class="section-intro">
-        On-set clips and makeup / wardrobe footage.
-      </p>
-
-      <div class="video-grid">
-
-        <iframe
-          src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_1"
-          title="Missy Golden On-Set Clip 1"
-          allowfullscreen>
-        </iframe>
-
-        <iframe
-          src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_2"
-          title="Missy Golden On-Set Clip 2"
-          allowfullscreen>
-        </iframe>
-
-        <iframe
-          src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_3"
-          title="Missy Golden Makeup and Wardrobe Clip"
-          allowfullscreen>
-        </iframe>
-
+    <section id="media">
+      <div class="container card">
+        <h2 class="section-title">Media</h2>
+        <p>Performance clips and recent media are available here:</p>
+        <p>
+          <a href="https://www.instagram.com/missy.golden.nyc/" target="_blank" rel="noopener">Instagram: @missy.golden.nyc</a><br />
+          <a href="https://www.youtube.com/@MissyGolden-NYC" target="_blank" rel="noopener">YouTube: @MissyGolden-NYC</a><br />
+          <a href="https://www.tiktok.com/@missy.golden.nyc" target="_blank" rel="noopener">TikTok: @missy.golden.nyc</a>
+        </p>
       </div>
     </section>
 
-
-    <section class="section">
-      <h2>Photos</h2>
-
-      <div class="gallery">
-        <img src="assets/missy-headshot.jpg" alt="Missy Golden headshot" />
-        <img src="assets/missy-personality.jpg" alt="Missy Golden personality photo" />
-        <img src="assets/missy-fullbody.jpg" alt="Missy Golden full body photo" />
+    <section id="contact">
+      <div class="container card contact-card">
+        <div>
+          <h2 class="section-title">Contact</h2>
+          <p>For casting, audition, and representation inquiries:</p>
+        </div>
+        <div>
+          <p><strong>Email:</strong> <a href="mailto:missy.golden.social@gmail.com">missy.golden.social@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+17738752172">773-875-2172</a></p>
+          <p><strong>Location:</strong> New York City</p>
+        </div>
       </div>
     </section>
-
-
-    <section id="resume" class="section resume-section">
-      <h2>Resume</h2>
-
-      <p>
-        View or download Missy’s current acting resume.
-      </p>
-
-      <a href="assets/Missy_Golden_Resume.pdf" target="_blank" class="button primary">
-        View Resume
-      </a>
-    </section>
-
-
-    <section id="contact" class="section contact">
-      <h2>Contact</h2>
-
-      <p>For casting, representation, and professional inquiries:</p>
-
-      <p class="contact-line">
-        <strong>Phone:</strong>
-        <a href="tel:17738752172">773-875-2172</a>
-      </p>
-
-      <p class="contact-line">
-        <strong>Email:</strong>
-        <a href="mailto:missy.golden.social@gmail.com">missy.golden.social@gmail.com</a>
-      </p>
-
-      <div class="social-buttons">
-
-        <a href="https://www.instagram.com/missy.golden.nyc/" target="_blank" class="social-button">
-          Instagram
-        </a>
-
-        <a href="https://www.tiktok.com/@missy.golden.nyc" target="_blank" class="social-button">
-          TikTok
-        </a>
-
-        <a href="https://www.youtube.com/@MissyGolden-NYC" target="_blank" class="social-button">
-          YouTube
-        </a>
-
-        <a href="https://www.facebook.com/profile.php?id=61584196892531&sk=about" target="_blank" class="social-button">
-          Facebook
-        </a>
-
-        <a href="https://github.com/MissyGoldenFromNewYorkCity/MissyGoldenActor/tree/main/assets" target="_blank" class="social-button">
-          GitHub
-        </a>
-
-      </div>
-    </section>
-
   </main>
 
-
   <footer>
-    <p>© 2026 Missy Golden. Parent/guardian-managed site.</p>
+    <div class="container">
+      © 2026 Missy Golden. Performer profile managed by parent/guardian.
+    </div>
   </footer>
-
 </body>
 </html>
