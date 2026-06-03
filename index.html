@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Missy Golden | Actor & Singer</title>
-
+  <title>Missy Golden | Actress</title>
   <style>
     :root{
       --bg:#f7f1ee;
@@ -139,15 +138,12 @@
       color:#fff;
       font-weight:700;
       transition:0.2s ease;
+      display:inline-block;
     }
 
     .button.secondary{
       background:transparent;
       color:var(--accent-dark);
-    }
-
-    .button:hover{
-      transform:translateY(-1px);
     }
 
     section{
@@ -170,7 +166,7 @@
 
     .credit{
       display:grid;
-      grid-template-columns:1.4fr 1fr 1fr 1fr 1fr auto;
+      grid-template-columns:1.3fr 1fr 2fr;
       gap:16px;
       padding:14px 0;
       border-bottom:1px solid var(--line);
@@ -185,19 +181,6 @@
       text-transform:uppercase;
       color:#777;
       margin-bottom:3px;
-    }
-
-    .materials-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-    }
-
-    .material-box{
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:20px;
-      background:#fffaf7;
     }
 
     .skills{
@@ -225,18 +208,13 @@
     }
 
     @media(max-width:850px){
-
-      .hero{
+      .hero,
+      .credit{
         grid-template-columns:1fr;
       }
 
       h1{
         font-size:54px;
-      }
-
-      .credit,
-      .materials-grid{
-        grid-template-columns:1fr;
       }
     }
   </style>
@@ -246,396 +224,230 @@
 
 <header>
   <div class="container">
-
     <nav>
-
       <div class="logo">MISSY GOLDEN</div>
-
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#credits">Credits</a>
-        <a href="#materials">Materials</a>
         <a href="#training">Training</a>
         <a href="#skills">Skills</a>
+        <a href="#representation">Representation</a>
         <a href="#contact">Contact</a>
       </div>
-
     </nav>
-
   </div>
 </header>
 
 <main>
 
 <section class="hero container">
-
   <div class="hero-image">
     <img src="./assets/missy-headshot.jpg" alt="Missy Golden headshot">
   </div>
 
   <div>
-
-    <div class="eyebrow">
-      Actor | Singer | New York City
-    </div>
+    <div class="eyebrow">Actress • New York City</div>
 
     <h1>Missy Golden</h1>
 
     <p class="tagline">
-      Joyful, expressive young performer with strong memorization skills,
-      natural screen presence, and professional on-set experience.
+      Joyful and expressive young actress with professional experience in film,
+      music videos, and commercial productions.
     </p>
 
     <div class="pills">
-      <span class="pill">Playing Age: 5–9</span>
       <span class="pill">Height: 3'11"</span>
-      <span class="pill">Hair: Brown</span>
-      <span class="pill">Eyes: Brown</span>
-      <span class="pill">Non-Union</span>
+      <span class="pill">Brown Hair</span>
+      <span class="pill">Brown Eyes</span>
+      <span class="pill">New York City</span>
     </div>
 
     <div class="buttons">
-
-      <a class="button" href="mailto:missy.golden.social@gmail.com">
-        Contact
-      </a>
-
-      <a class="button secondary" href="./assets/Missy_Golden_Resume.pdf" target="_blank">
-        View Résumé
-      </a>
-
-      <a class="button secondary" href="./assets/Missy_Golden_Comp_Card.pdf" target="_blank">
-        View Comp Card
-      </a>
-
-      <a class="button secondary" href="https://www.youtube.com/@MissyGolden-NYC" target="_blank">
-        Watch Clips
-      </a>
-
+      <a class="button" href="mailto:missy.golden.social@gmail.com">Contact</a>
+      <a class="button secondary" href="./assets/Missy_Golden_Resume.pdf" target="_blank">View Résumé</a>
+      <a class="button secondary" href="https://www.youtube.com/@MissyGolden-NYC" target="_blank">Watch Clips</a>
     </div>
-
   </div>
-
 </section>
 
 <section id="about">
-
   <div class="container card">
-
-    <h2>About</h2>
-
+    <h2>Profile</h2>
     <p>
-      Missy Golden is a New York City–based child actor and singer
-      with experience in film, music videos, commercial production,
-      choir training, and screen acting environments.
+      Missy Golden is a New York City–based young actress with experience in
+      film, music videos, and commercial productions.
     </p>
-
   </div>
-
 </section>
 
 <section id="credits">
+  <div class="container card">
+    <h2>Film</h2>
 
-  <div class="container">
-
-    <div class="card">
-
-      <h2>Film</h2>
-
-      <div class="credit">
-
-        <div>
-          <div class="label">Production</div>
-          <strong>The Bacteria Orchid</strong>
-        </div>
-
-        <div>
-          <div class="label">Role</div>
-          Villain’s Child
-        </div>
-
-        <div>
-          <div class="label">Producer</div>
-          Christopher Funderburg
-        </div>
-
-        <div>
-          <div class="label">Director</div>
-          Christopher Funderburg
-        </div>
-
-        <div>
-          <div class="label">Company</div>
-          -
-        </div>
-
-        <div>
-          <div class="label">Year</div>
-          2026
-        </div>
-
+    <div class="credit">
+      <div>
+        <div class="label">Production</div>
+        <strong>The Bacteria Orchid</strong>
       </div>
-
-      <h2 style="margin-top:34px;">Music Videos</h2>
-
-      <div class="credit">
-
-        <div>
-          <div class="label">Production</div>
-          <strong>Caskets — Chris Webby x Ren</strong>
-        </div>
-
-        <div>
-          <div class="label">Role</div>
-          Young Girl
-        </div>
-
-        <div>
-          <div class="label">Producer</div>
-          Donn "Q" Quijada
-        </div>
-
-        <div>
-          <div class="label">Director</div>
-          Rook
-        </div>
-
-        <div>
-          <div class="label">Company</div>
-          Crooked Smile Productions
-        </div>
-
-        <div>
-          <div class="label">Year</div>
-          2026
-        </div>
-
+      <div>
+        <div class="label">Role</div>
+        Johnson Kid
       </div>
-
-      <div class="credit">
-
-        <div>
-          <div class="label">Production</div>
-          <strong>Pathetic Beasts — Perry Maysun</strong>
-        </div>
-
-        <div>
-          <div class="label">Role</div>
-          Featured Background / Grandchild
-        </div>
-
-        <div>
-          <div class="label">Producer</div>
-          Josh Shuster
-        </div>
-
-        <div>
-          <div class="label">Director</div>
-          Ares Kim
-        </div>
-
-        <div>
-          <div class="label">Company</div>
-          Full Scale Media Group
-        </div>
-
-        <div>
-          <div class="label">Year</div>
-          2026
-        </div>
-
+      <div>
+        <div class="label">Director / Writer / Producer</div>
+        Christopher Funderburg
       </div>
-
     </div>
 
-  </div>
+    <h2 style="margin-top:34px;">Music Videos</h2>
 
-</section>
-
-<section>
-
-  <div class="container">
-
-    <div class="card">
-
-      <h2>Commercial / Industrial</h2>
-
-      <div class="credit">
-
-        <div>
-          <div class="label">Production</div>
-          <strong>Met 81st Street Studios</strong>
-        </div>
-
-        <div>
-          <div class="label">Role</div>
-          Extra
-        </div>
-
-        <div>
-          <div class="label">Producer</div>
-          The Metropolitan Museum of Art, New York City
-        </div>
-
-        <div>
-          <div class="label">Director</div>
-          —
-        </div>
-
-        <div>
-          <div class="label">Company</div>
-          Bluecadet Productions
-        </div>
-
-        <div>
-          <div class="label">Year</div>
-          2024
-        </div>
-
+    <div class="credit">
+      <div>
+        <div class="label">Production</div>
+        <strong>Pathetic Beasts</strong>
       </div>
-
+      <div>
+        <div class="label">Role</div>
+        Grandchild
+      </div>
+      <div>
+        <div class="label">Details</div>
+        Music Artist: Perry Maysun<br>
+        Producer: Joe Shuster<br>
+        Media Company: Full Scale Media Group
+      </div>
     </div>
 
-  </div>
-
-</section>
-
-<section id="materials">
-
-  <div class="container">
-
-    <div class="card">
-
-      <h2>Performer Materials</h2>
-
-      <div class="materials-grid">
-
-        <div class="material-box">
-
-          <h3>Résumé</h3>
-
-          <p>
-            View or download Missy Golden’s current acting résumé.
-          </p>
-
-          <a class="button secondary" href="./assets/Missy_Golden_Resume.pdf" target="_blank">
-            View Résumé
-          </a>
-
-        </div>
-
-        <div class="material-box">
-
-          <h3>Model Comp Card</h3>
-
-          <p>
-            View or download Missy Golden’s model comp card.
-          </p>
-
-          <a class="button secondary" href="./assets/Missy_Golden_Comp_Card.pdf" target="_blank">
-            View Comp Card
-          </a>
-
-        </div>
-
+    <div class="credit">
+      <div>
+        <div class="label">Production</div>
+        <strong>Caskets</strong>
       </div>
-
+      <div>
+        <div class="label">Role</div>
+        Young Girl
+      </div>
+      <div>
+        <div class="label">Details</div>
+        Music Artist: Inpatient, Ren & Chris Webby<br>
+        Directors: Rook, Frankie Fire<br>
+        Production Company: Crooked Smile Casting and Productions
+      </div>
     </div>
 
-  </div>
+    <h2 style="margin-top:34px;">Commercial</h2>
 
+    <div class="credit">
+      <div>
+        <div class="label">Production</div>
+        <strong>Hilton Hotels</strong>
+      </div>
+      <div>
+        <div class="label">Role</div>
+        Child
+      </div>
+      <div>
+        <div class="label">Producer</div>
+        Hilton Hotels
+      </div>
+    </div>
+
+    <div class="credit">
+      <div>
+        <div class="label">Production</div>
+        <strong>81st Street Studios</strong>
+      </div>
+      <div>
+        <div class="label">Role</div>
+        Extra
+      </div>
+      <div>
+        <div class="label">Details</div>
+        Production Company: Bluecadet<br>
+        Producer: Metropolitan Museum of Art, New York
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="training">
+  <div class="container card">
+    <h2>Training</h2>
 
-  <div class="container">
+    <p>
+      <strong>Gymnastics</strong><br>
+      4 years
+    </p>
 
-    <div class="card">
-
-      <h2>Training</h2>
-
-      <p>
-        <strong>NYC Children’s Chorus</strong><br>
-        Piccolo Ensemble
-      </p>
-
-      <p>
-        <strong>Private Vocal Coaching</strong><br>
-        Ongoing
-      </p>
-
-    </div>
-
+    <p>
+      <strong>Chorus</strong><br>
+      1 year
+    </p>
   </div>
-
 </section>
 
 <section id="skills">
+  <div class="container card">
+    <h2>Skills</h2>
 
-  <div class="container">
-
-    <div class="card">
-
-      <h2>Special Skills</h2>
-
-      <div class="skills">
-
-        <span class="skill">Singing</span>
-        <span class="skill">Acting</span>
-        <span class="skill">Improvisation</span>
-        <span class="skill">Sight Reading</span>
-        <span class="skill">Strong Memorization</span>
-        <span class="skill">Screen Acting</span>
-        <span class="skill">Climbing</span>
-
-      </div>
-
+    <div class="skills">
+      <span class="skill">Treble Singer</span>
+      <span class="skill">Climbing</span>
+      <span class="skill">Miming</span>
+      <span class="skill">Sight Reading</span>
     </div>
-
   </div>
+</section>
 
+<section id="representation">
+  <div class="container card">
+    <h2>Representation</h2>
+
+    <p>
+      <strong>Talia Perregaux</strong><br>
+      MMG Model and Talent Management<br>
+      <a href="tel:2122538353">212-253-8353</a><br>
+      <a href="mailto:info@nymmg.com">info@nymmg.com</a><br>
+      New York, New York
+    </p>
+
+    <p>
+      <strong>Katelynn Pendleton</strong><br>
+      Professionally Pretty<br>
+      <a href="tel:3216102138">321-610-2138</a><br>
+      <a href="mailto:katelynn@professionallypretty.com">katelynn@professionallypretty.com</a><br>
+      Orlando, Florida
+    </p>
+  </div>
 </section>
 
 <section id="contact">
+  <div class="container card">
+    <h2>Manager Contact</h2>
 
-  <div class="container">
+    <p>
+      <strong>Phone:</strong>
+      <a href="tel:7738752172">773-875-2172</a>
+    </p>
 
-    <div class="card">
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:missy.golden.social@gmail.com">
+        missy.golden.social@gmail.com
+      </a>
+    </p>
 
-      <h2>Contact</h2>
+    <p>
+      <strong>Location:</strong> New York City
+    </p>
 
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:missy.golden.social@gmail.com">
-          missy.golden.social@gmail.com
-        </a>
-      </p>
-
-      <p>
-        <strong>Instagram:</strong>
-        <a href="https://www.instagram.com/missy.golden.nyc/" target="_blank">
-          @missy.golden.nyc
-        </a>
-      </p>
-
-      <p>
-        <strong>YouTube:</strong>
-        <a href="https://www.youtube.com/@MissyGolden-NYC" target="_blank">
-          @MissyGolden-NYC
-        </a>
-      </p>
-
-      <p>
-        <strong>TikTok:</strong>
-        <a href="https://www.tiktok.com/@missy.golden.nyc" target="_blank">
-          @missy.golden.nyc
-        </a>
-      </p>
-
-    </div>
-
+    <p>
+      <strong>Website:</strong>
+      <a href="https://missygoldenfromnewyorkcity.github.io/MissyGoldenActor/" target="_blank">
+        Missy Golden Actor Website
+      </a>
+    </p>
   </div>
-
 </section>
 
 </main>
